@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const { config } = require('./config');
 const heroApi = require('./routes/hero');
+const aboutApi = require('./routes/about');
 const skillsApi = require('./routes/skills');
 const projectsApi = require('./routes/projects');
 const communitiesApi = require('./routes/communities');
@@ -22,6 +23,7 @@ app.use(express.json());
 
 // Routes
 heroApi(app);
+aboutApi(app);
 skillsApi(app);
 projectsApi(app);
 communitiesApi(app);
