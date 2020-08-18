@@ -2,7 +2,7 @@ const joi = require('@hapi/joi');
 
 const aboutIdSchema = joi.string().regex(/^[0-9a-fA-F]{24}$/);
 const aboutPhotoSchema = joi.string().uri();
-const aboutDescriptionSchema = joi.string().max(280);
+const aboutDescriptionSchema = joi.string().max(420);
 
 const createAboutSchema = {
   photo: aboutPhotoSchema.required(),
